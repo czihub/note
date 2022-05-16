@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例1：改变盒子文字</title>
+    <style>
+        #box {
+            width: 150px;
+            height: 100px;
+            background-color: aquamarine;
+            font-size: 30px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" onclick="change()">
+    </div>
+    <script>
+        var count = 0;
+
+
+        function change() {
+            //1.获取元素
+            var docuQsBox = document.querySelector('#box')
+
+            //2.执行相应的代码
+            count = count + 1;
+            if (count % 2 == 0) {
+                docuQsBox.innerHTML = "偶数"
+            } else {
+                docuQsBox.innerHTML = "奇数"
+            }
+        }
+    </script>
+</body>
+
+</html>
